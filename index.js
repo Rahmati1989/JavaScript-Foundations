@@ -1,9 +1,13 @@
 // 🌟🌟🌟 M V P 🌟🌟🌟//
 
 // 🏡 Task 1: Variables
-/* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
+/* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively.
+ Create another value called name and give it the value of your own name.
 */
-
+var principal = 200000;
+let interest = 0.05;
+var years = 30;
+const name = "Rafiullah";
 
 
 
@@ -14,16 +18,19 @@
 (1) Create a variable called `monthlyInterestRate` and give it the value of interest rate divided by 12. 
 (2) Create another variable called `periods` and give it the value of years*12.
 */
-
+let monthlyInterestRate = interest/12;
+let periods = years*12;
 
 
 
 // 🏡 Task 2: Harder Math
-/* Create your calculator! Use the formula in the ReadMe (also below) to run calculations on your numbers. Save the final value into a variable called monthlyRate. 
+/* Create your calculator! Use the formula in the ReadMe (also below) to run calculations on your numbers.
+ Save the final value into a variable called monthlyRate. 
 
 M = P [ I ( 1 + I )^N ] / [ ( 1 + I )^N – 1 ]
 
-Hint: while these calculations can be done in one line, it might be helpful to create seperate variables to hold parts of your equation. That might look like this:
+Hint: while these calculations can be done in one line, it might be helpful to create seperate variables to hold parts of your equation.
+ That might look like this:
 
 (1) Create a variable called n1 and set it equal to  (1 + monthlyInterestRate )^N
 (2) Create a variable called numerator and set it equal to p * n1 * monthlyInterestRate
@@ -35,16 +42,26 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
+let n1 = (1+monthlyInterestRate)^N;
+let numerator = p*n1*monthlyInterestRate;
+let denominator = n1-1;
+let monthlyRate = numerator/denominator;
+
+
 
 
 
 // 🏡 Task 3: Function
-/* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name}, your monthly rate is ${monthlyRate}"
+/* Create a function called `mortgageCalculator` that combines all of the steps from task 1 and 2 and returns a sentence "{Name},
+ your monthly rate is ${monthlyRate}"
+
 
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-
+function mortgageCalculator(name){
+return ([name], "your monthly rate is ${monthlyRate}" )
+}
 
 
 
@@ -54,6 +71,11 @@ If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly 
 For example,
 mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
 */
+
+function mortgageCalculator(P,I,N){
+
+}
+mortgageCalculator(20000,0.5,30);
 
 
 
