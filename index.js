@@ -9,7 +9,7 @@ let interest = 0.05;
 var years = 30;
 const name = "Rafiullah";
 
-
+console.log("Principal", principal);
 
 
 // 🏡 Task 1.5: Simple Math
